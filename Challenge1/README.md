@@ -7,10 +7,10 @@ This is the required functionality, this can not stop working.
 
 To simulate a Barcode reader a button has been added to the page, this sends a short sequence of random keys followed by 'Enter'.
 
-Problem:
+## Problem:
 When we display an input field we want the user to manually enter some information using a keyboard (softkeys on iPad or Tablet).
 Whilst a user is entering information into the input field we don't want the function **triggerBarcode** to be fired.
 
-Bonus:
+## Bonus:
 Your solution should be simple, it is possible to solve this with a single line of code.
 
