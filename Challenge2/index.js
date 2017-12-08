@@ -27,7 +27,7 @@ function Game(){
 			} )
 		} )
 		//use lodash to loop through all the grids and determine if there is currently a winner
-		return false;
+		return winner;
 	}
 	
 	self.switchPlayer = function(){
