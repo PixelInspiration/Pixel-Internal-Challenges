@@ -1,0 +1,44 @@
+body{
+    background-color: white;
+}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+li{
+    margin: 0px;
+    padding: 0px;
+}
+
+p{
+    font-size: 50px;
+}
+
+.game::after{
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.column{
+    float: left;
+}
+
+.grid{
+    width: 200px;
+    height: 200px;
+    background-color: grey;
+    display: block;
+    margin: 2px;
+}
+
+.grid.player1{
+    background-color: red;
+}
+
+.grid.player2{
+    background-color: blue;
+}
