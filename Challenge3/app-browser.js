@@ -27,3 +27,5 @@ $(function(){
 function AppModel( options ){
 	this.maze = ko.observableArray( options.maze || [] );
 }
+
+console.log('rob')
