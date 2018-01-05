@@ -20,12 +20,33 @@ $(function(){
 
 		//update the display
 		refreshMaze();
+
+		var easystar = new EasyStar.js();
+
+		easystar.setGrid(model.maze());
+		easystar.setAcceptableTiles(['c']);
+		easystar.findPath(7, 0, 7, 14, function( path ) {
+			if (path === null) {
+				alert("Path was not found.");
+			} else {
+				console.log(path)
+				let m = model.maze()
+				_.map(path, (point) => {
+					m[point.y][point.x] = 'r'
+				})
+				refreshMaze();
+			}
+		});
+		easystar.calculate()
+
 	});
 });
 
 
 function AppModel( options ){
 	this.maze = ko.observableArray( options.maze || [] );
-}
 
-console.log('rob')
+	this.onClick = function(type, evt){
+		console.log(type, evt)
+	}
+}
