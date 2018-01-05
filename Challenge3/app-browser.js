@@ -1,6 +1,8 @@
 $(function(){
 	//load the json
-	$.get('maze1.json', function( data ){
+	$.getJSON('maze1.json', function( data ){
+		//convert the data if required
+		//data = Array.isArray( data ) ? data : JSON.parse( data );
 		
 		function refreshMaze(){
 			var maze = model.maze();
